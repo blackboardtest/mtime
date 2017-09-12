@@ -1,13 +1,14 @@
 hubble.getXML('http://feed.mtime.com/movienews.rss', function (error, response, data) {
-	data.result.forEach(function(item) {
-		var url = item.link;
+	$('item').each(function (index, value) {
+		var url = $(this).find('link').text();
 		var key = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.html'));
+		var dom = $(this);
 
 		articles.get('key', key, function (article) {
 			if (article) return;
 
-			var title   = item.title;
-			var summary = item.description;
+			var title   = dom.find('title').text().trim();
+			var summary = dom.find('description').text().trim();
 
 			hubble.getHtml(url, function (error, response, $) {
 				var content = '<div class="video">' + $('#db_videobox').html() + '</div>';
