@@ -1,9 +1,8 @@
-hubble.getJSON('http://feed.mtime.com/movienews.rss', function (error, response, data) {
+hubble.getXML('http://feed.mtime.com/movienews.rss', function (error, response, data) {
 	data.result.forEach(function(item) {
 		var url = item.link;
 		var key = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.html'));
 
-		console.log(url)
 		articles.get('key', key, function (article) {
 			if (article) return;
 
