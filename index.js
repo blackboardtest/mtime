@@ -1,4 +1,4 @@
-hubble.getXML('http://feed.mtime.com/movienews.rss', function (error, response, data) {
+hubble.getXML('http://feed.mtime.com/movienews.rss', function (error, response, $) {
 	$('item').each(function (index, value) {
 		var url = $(this).find('link').text();
 		var key = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.html'));
