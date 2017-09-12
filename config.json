@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "name": "Mtime时光网",
+  "description": "Mtime时光网",
+  "keywords": [
+    "电影"
+  ],
+  "author": {
+    "name": "vimrus",
+    "email": "vimrus.com@gmail.com",
+    "url": "https://github.com/vimrus"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vimrus/mtime"
+  },
+  "bugs": "https://github.com/vimrus/mtime/issues",
+  "main": "index.js"
+}
